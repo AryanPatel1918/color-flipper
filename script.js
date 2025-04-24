@@ -1,4 +1,6 @@
 function changeColour() {
+    const button = document.querySelector('.button-container button');
+    button.disabled = true;
 
     let red = Math.floor(Math.random() * 256);
     let green = Math.floor(Math.random() * 256);
@@ -13,8 +15,9 @@ function changeColour() {
 
     // After the opacity transition (1s), update the text and make it fade in
     setTimeout(function() {
-        currentColour.innerHTML = randomColor; // Change the text content
+        currentColour.textContent = randomColor; // Change the text content
         currentColour.style.opacity = 1;  // Fade the text back in
+        button.disabled = false;
     }, 1000);  // Match the 1s transition time
 }
 
