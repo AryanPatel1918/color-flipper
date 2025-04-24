@@ -21,5 +21,21 @@ function changeColour() {
     }, 1000);  // Match the 1s transition time
 }
 
+function applyHexColour() {
+    const input = document.getElementById('hexInput');
+    const hex = input.value.trim();
+    const currentColour = document.getElementById('currentColour');
+
+    const regex = /^#([0-9A-Fa-f]{6})$/;
+    const isValidHex = regex.test(hex);
+
+    if (isValidHex) {
+        document.body.style.backgroundColor = hex;
+        currentColour.textContent = hex;
+    } else {
+        alert("Please enter a valid 6-digit hex color code starting with #");
+    }
+}
+
 
 
