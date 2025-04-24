@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Simple Color Flipper</title>
+        <title>Hex Color Flipper</title>
         <link rel="stylesheet" href="styles.css">
         <script src="script.js" defer></script>
     </head>
@@ -23,9 +23,12 @@
             </div>
         </nav>
 
-        <div class="button-container">
-            <button class="simple-button" onclick="changeColour()">Change Background Colour</button>
-            <p>Current colour: <b><span id="currentColour">white</span></b></p>
+        <div class="wrapper">
+            <div>
+                <input type="text" id="hexInput" placeholder="#ff4500" maxlength="7">
+                <button class="hex-button" onclick="applyHexColour()">Apply Colour</button>
+                <p>Current colour: <b><span id="currentColour">#ffffff</span></b></p>
+            </div>
         </div>
 
     </body>
